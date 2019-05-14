@@ -1,12 +1,8 @@
 # Workshop [MVC-RUBY ON RAILS](https://rubyonrails.org/)
-<img src="http://vskills.in/certification/blog/wp-content/uploads/2014/12/ruby-a-programmers-best-friend-indeed.png" width="150" height="150"/>
-<img src="https://rubyonrails.org/images/rails-logo.svg" width="150" height="150"/>
+<img src="http://vskills.in/certification/blog/wp-content/uploads/2014/12/ruby-a-programmers-best-friend-indeed.png" width="150" height="150"/><img src="https://rubyonrails.org/images/rails-logo.svg" width="150" height="150"/>
 
 ### 1. Goal:
 - Understand **RUBY** and **RAILS** basically.
-
-- Có thể làm việc được với **RUBY** và **RAILS** ở mức cơ bản.
-
 - Completed (backend và frontend) sample at end of course.
 ### 2. Precondition:
 [<img src="https://cdn-images-1.medium.com/max/2600/1*9QRFQdpO2f59GsN2KsE9XA.png" title="*Data structures and algorithms*" width="200" height="100">](https://www.coursera.org/specializations/data-structures-algorithms)
