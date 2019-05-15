@@ -17,4 +17,5 @@
 - ######  [ Session 3: Introduction Rails](./courses/DAY2.md)
 - ######  [ Session 4: Migration](./courses/DAY2.md)
 - ######  [ Session 5: Model-View-Controller](./courses/DAY2.md)
-- ######  [ Session 6: Digging Deeper](./courses/DAY3.md)
+- ######  [ Session 6: Testing](./courses/DAY2.md)
+- ######  [ Session 7: Digging Deeper](./courses/DAY3.md)
