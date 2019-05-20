@@ -155,4 +155,70 @@ colors.each do |key, value|
 end
 
 ```
-  
+
+## Ruby Ranges
+- A range (1..5) means it includes 1, 2, 3, 4, 5 values and a range (1...5) means it includes 1, 2, 3, 4 values.
+```
+(10..15).each do |n| 
+   print n, ' ' 
+end
+# 10 11 12 13 14 15
+```
+## [Operators](https://www.tutorialspoint.com/ruby/ruby_operators.htm)
+- For each operator (+ - * / % ** & | ^ << >> && ||), there is a corresponding form of abbreviated assignment operator (+= -= etc.).
+
+## IF, UNLESS
+```
+print "Con cho con con con cho me" if 5 > 4
+$var =  1
+print "1 -- Cai con cho nay bang 1\n" if $var
+print "2 -- Cai con cho nay khong in ra\n" unless $var
+$var = false
+print "3 -- Cai con cho nay bang false\n" unless $var
+```
+
+## Ruby for Statement
+```
+for variable [, variable ...] in expression [do]
+   code
+end
+
+#ex:
+for i in 0..5
+   puts "Bien cai noi nay la: #{i}"
+end
+```
+
+- Each
+```
+(expression).each do |variable[, variable...]| code end
+
+(0..5).each do |i|
+   puts "Bien cai noi nay la: #{i}"
+end
+```
+
+- redo
+```
+for i in 0..5
+   if i < 2 then
+      puts "Loop hoai luon nha con cho: #{i}"
+      redo
+   end
+end
+#Loop hoai luon nha con cho: 0
+#Loop hoai luon nha con cho: 0
+#............................
+```
+- retry
+```
+for i in 0..5
+   retry if i > 2
+   puts "Loop nua luon nha con cho: #{i}"
+end
+#Loop nua luon nha con cho: 0
+#Loop nua luon nha con cho: 1
+#Loop nua luon nha con cho: 2
+#...
+```
+
