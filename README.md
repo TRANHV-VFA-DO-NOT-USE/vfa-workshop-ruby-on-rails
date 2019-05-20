@@ -13,9 +13,9 @@
 
 ### 4. Maps:
 - ######  [ Session 1: Introduction + Setup](./courses/DAY1.md)
-- ######  [ Session 2: Ruby programming language](./courses/DAY1.md)
-- ######  [ Session 3: Introduction Rails](./courses/DAY2.md)
-- ######  [ Session 4: Migration](./courses/DAY2.md)
-- ######  [ Session 5: Model-View-Controller](./courses/DAY2.md)
-- ######  [ Session 6: Testing](./courses/DAY2.md)
-- ######  [ Session 7: Digging Deeper](./courses/DAY3.md)
+- ######  [ Session 2: Ruby programming language](./courses/DAY2.md)
+- ######  [ Session 3: Introduction Rails](./courses/DAY3.md)
+- ######  [ Session 4: Migration](./courses/DAY4.md)
+- ######  [ Session 5: Model-View-Controller](./courses/DAY5.md)
+- ######  [ Session 6: Testing](./courses/DAY6.md)
+- ######  [ Session 7: Digging Deeper](./courses/DAY7.md)
