@@ -222,3 +222,54 @@ end
 #...
 ```
 
+## Method
+
+```
+def method_name [( [arg [= default]]...[, * arg [, &expr ]])]
+   expr..
+end
+```
+
+```
+def test(a1 = "conbo", a2 = "concho")
+   puts "Day la con: #{a1}"
+   puts "Va day la con: #{a2}"
+   a1
+end
+b = test "contrau", "conheo"
+test
+puts b
+```
+
+## Blocks
+```
+[1, 2, 3].each do |n|
+  puts "Number #{n}"
+end
+
+[1, 2, 3].each {|n| puts "Number #{n}"}
+
+```
+## Yield
+```
+def my_method
+  puts "1"
+  yield
+  puts "3"
+end
+
+my_method do
+  puts "2"
+end
+```
+
+
+```
+ def my_method2
+   yield("Con chó", "3")
+ end
+
+ my_method2 do |name, age|
+    p "#{name} này #{age} tuổi."
+ end
+```
