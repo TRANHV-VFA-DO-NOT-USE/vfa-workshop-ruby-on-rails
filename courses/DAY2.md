@@ -262,7 +262,7 @@ my_method do
   puts "2"
 end
 ```
-
+- With param
 
 ```
  def my_method2
@@ -286,8 +286,12 @@ end
 wrap_in_tags("span", "something") {|html| p html}
 wrap_in_tags("title", "hello") {|html| p html}
 
-#"<span>something</span>"
+#<span>something</span>
 
-#"<title>hello</title>"
+#<title>hello</title>
+
 ```
-
+ - Proc:
+ 
+ - Lambda:
+  
