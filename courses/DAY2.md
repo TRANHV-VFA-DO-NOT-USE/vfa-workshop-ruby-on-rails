@@ -293,5 +293,21 @@ wrap_in_tags("title", "hello") {|html| p html}
 ```
  - Proc:
  
+ ```
+ p = Proc.new {|x| puts x}
+ p.call('conbocon')
+ p.call('conbocon', 'conchocon')
+ 
+ [1, 2, 3, 4].each(&p)
+[“conbo”, “concho”, “contrau”].each(&p)
+ ```
+ 
  - Lambda:
   
+```
+lambda = lambda { |x| x + 1 }
+lambda.call(5)
+
+lambda.call(5,6) #error
+
+```
