@@ -311,3 +311,25 @@ lambda.call(5)
 lambda.call(5,6) #error
 
 ```
+
+ - Ex prop, lambda
+ ```
+ def proc_method
+    proc = Proc.new { return 1 + 1 }
+    proc.call
+
+    return 2 + 2
+  end
+
+  def lambda_method
+    lam = lambda { return 1 + 1 }
+    lam.call
+
+    return 2 + 2
+  end
+
+  // call proc and lambda method
+
+  proc_method #=> 2
+  lambda_method #=> 4
+  ``
