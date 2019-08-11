@@ -1,0 +1,16 @@
+<h1>Add new factory</h1>
+
+<ul>
+  <% @factory.errors.each_with_index do |msg, i| %>
+  <li><%= msg[0].to_s + " " + msg[1].to_s %></li>
+  <% end %>
+</ul>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "factory_name">Name</label>:
+<%= text_field 'factory', 'name' %></p>
+
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>

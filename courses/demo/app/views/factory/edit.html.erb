@@ -1,0 +1,9 @@
+<h1>Edit Factory Detail</h1>
+
+<%= form_for @factory, :url =>{:action => "update", :id =>@factory} do |f| %>
+
+<p>Name: <%= f.text_field 'name' %></p>
+<%= f.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>

@@ -1,0 +1,30 @@
+<% if @employees.blank? %>
+<p>There are not any employees currently in the system.</p>
+<% else %>
+<p>These are the current employees in our system</p>
+<% end %>
+<p><%= link_to "Add new Employee", {:action => 'new' }%></p>
+<%unless @employees.blank?%>
+<table id="table">
+<tr id="header">
+   <th>id</th>
+   <th>first name</th>
+   <th>last name</th>
+   <th>birthday</th>
+   <th>factory</th>
+</tr>
+<% @employees.each do |c| %>
+   <tr id="row">
+      <td><%= link_to c.id, {:action => 'show', :id => c.id} -%></td>
+      <td><%= c.first_name%></td>
+      <td><%= c.last_name%></td>
+      <td><%= c.birthday%></td>
+      <td><%= c.factory.name%></td>
+      <td><%= link_to "Show", {:action => 'show', :id => c.id} -%></td>
+      <td><%= link_to "Edit", {:action => 'edit', :id => c.id} -%></td>
+      <td><%= link_to 'Delete', {:action => "destroy", :id => c.id}, :method => 'delete', data: { confirm: 'Are you sure?' } %></td>
+   </tr>
+   <% end %>
+</table>
+
+<% end %>

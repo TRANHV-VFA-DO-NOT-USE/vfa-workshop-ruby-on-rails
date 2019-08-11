@@ -1,0 +1,23 @@
+<% if @factories.blank? %>
+<p>There are not any factories currently in the system.</p>
+<% else %>
+<p>These are the current factories in our system</p>
+
+<% end %>
+<p><%= link_to "Add new factory", {:action => 'new' }%></p>
+
+<table id="table">
+<tr id="header">
+   <th>id</th>
+   <th>name</th>
+</tr>
+<% @factories.each do |c| %>
+   <tr id="row">
+      <td><%= c.id%></td>
+      <td><%= c.name%></td>
+      <td><%= link_to "Show", {:action => 'show', :id => c.id} -%></td>
+      <td><%= link_to "Edit", {:action => 'edit', :id => c.id} -%></td>
+      <td><%= link_to 'Delete', {:action => "destroy", :id => c.id}, :method => 'delete', data: { confirm: 'Are you sure?' } %></td>
+   </tr>
+   <% end %>
+</table>

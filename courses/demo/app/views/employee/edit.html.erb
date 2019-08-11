@@ -1,0 +1,11 @@
+<h1>Edit employee Detail</h1>
+
+<%= form_for @employee, :url =>{:action => "update", :id =>@employee} do |f| %>
+
+<p>first name: <%= f.text_field 'first_name' %></p>
+<p>last name: <%= f.text_field 'last_name' %></p>
+<%= collection_select(:employee, :factory_id, @factories, :id, :name, prompt: true) %></p>
+<%= f.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>

@@ -1,0 +1,10 @@
+<h1>Employee info</h1>
+<p>
+   <strong>First name: </strong> <%= @employee.first_name %><br />
+   <strong>Last name: </strong> <%= @employee.last_name %><br />
+   <strong>Birthday: </strong> <%= @employee.birthday %><br />
+   <strong>Factory: </strong> <%= @employee.factory.name %><br />
+   <strong>Created Date:</strong> <%= @employee.created_at %><br />
+</p>
+<hr />
+<%= link_to 'Back', {:action => 'index'} %>

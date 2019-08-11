@@ -1,0 +1,30 @@
+<h1><%= @factory.name %></h1>
+<p>
+   <strong>Name: </strong> <%= @factory.name %><br />
+   <strong>Created Date:</strong> <%= @factory.created_at %><br />
+</p>
+<hr />
+<table id="table">
+<tr id="header">
+   <th>id</th>
+   <th>first name</th>
+   <th>last name</th>
+   <th>birthday</th>
+   <th>factory</th>
+</tr>
+<% @factory.employees.each do |c| %>
+   <tr id="row">
+      <td><%= link_to c.id, {:action => 'show', :id => c.id} -%></td>
+      <td><%= c.first_name%></td>
+      <td><%= c.last_name%></td>
+      <td><%= c.birthday%></td>
+      <td><%= c.factory.name%></td>
+      <td><%= link_to "Show", {controller: 'employee', :action => 'show', :id => c.id} -%></td>
+      <td><%= link_to "Edit", {controller: 'employee', :action => 'edit', :id => c.id} -%></td>
+      <td><%= link_to 'Delete', {controller: 'employee', :action => "destroy", :id => c.id}, :method => 'delete', data: { confirm: 'Are you sure?' } %></td>
+   </tr>
+   <% end %>
+</table>
+<hr />
+
+<%= link_to 'Back', {:action => 'index'} %>
