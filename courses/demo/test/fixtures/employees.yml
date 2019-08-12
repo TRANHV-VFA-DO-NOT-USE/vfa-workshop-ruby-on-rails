@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  first_name: MyString
-  last_name: MyString
-  birthday: MyString
+  first_name: ConBo
+  last_name: Thu1
+  birthday: 2019-12-12
   factory: one
 
 two:
-  first_name: MyString
-  last_name: MyString
-  birthday: MyString
+  first_name: ConCho
+  last_name: Thu1
+  birthday: 2019-12-12
   factory: two
