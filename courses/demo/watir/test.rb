@@ -1,7 +1,7 @@
 require 'watir'
 require 'watir-performance'
 
-# puts "Case 1 -- Test Goto factories exist"
+#puts "Case 1 -- Test Goto factories exist"
 # browser = Watir::Browser.new
 # browser.goto 'http://localhost:3000/'
 # if browser.text.include?("Go to Factories")
@@ -10,7 +10,7 @@ require 'watir-performance'
 #   puts "Test failed!"
 # end
 # browser.close
-# #End case 1
+#End case 1
 
 # puts "Case 2 click -- Goto factories exist"
 # browser = Watir::Browser.new
@@ -39,12 +39,12 @@ require 'watir-performance'
 # #End case 1
 
 
-#Case 4 Performance
+# Case 4 Performance
 # Test performance
 10.times do
    b = Watir::Browser.new :chrome
    b.goto 'http://localhost:3000/'
-   load_secs = b.performance.summary[:response_time] / 1000
-   puts "Load Time: #{load_secs} seconds."
+   load_secs = b.performance.summary[:response_time]
+   puts "Load Time: #{load_secs} miliseconds."
    b.close
 end
