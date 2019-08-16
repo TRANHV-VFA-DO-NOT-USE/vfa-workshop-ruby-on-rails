@@ -50,6 +50,7 @@ Step 2: Install Ruby
 brew install rbenv // install rbenv
 rbenv install -l //list of ruby version can install
 rbenv install -v 2.2.3 // install ruby version 2.2.3
+rbenv install -v 2.4.0 // install ruby version 2.2.3
 rbenv versions  // list all ruby versions installed
 rbenv global 2.2.3 // set ruby version for this computer, rbenv local 2.2.3 --set ruby version for current path.
 ruby -v //check ruby version
