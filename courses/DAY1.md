@@ -54,7 +54,8 @@ rbenv install -v 2.4.0 // install ruby version 2.4.0
 rbenv versions  // list all ruby versions installed
 rbenv global 2.6.3 // set ruby version for this computer, rbenv local 2.2.3 --set ruby version for current path.
 ruby -v //check ruby version
-//ruby 2.2.3p173 (2015-08-18 revivion 51636)
+//ruby 2.6.3 (2015-08-18 revivion 51636)
+
 
 ```
  - Interactive Ruby (IRb) provides a shell for experimentation. Within the IRb shell, you can immediately view expression results, line by line.
@@ -90,19 +91,33 @@ rails -v // check version rails
 - Ruby on Rails framework requires JavaScript Runtime Environment (Node.js) to manage the features of Rails.
 ```
 brew install node
+brew install yarn
 ```
 
 Step 4: Create demo application
 ```
-rails new demo
+rails new demo -d mysql
 cd demo
 ls // list items in app to find structure rails app
+```
+
+If error with mysql
+```
+brew install mysql
+gem install mysql2 -v '0.5.2' --source 'https://rubygems.org/' -- --with-cppflags=-I/usr/local/opt/openssl/include --with-ldflags=-L/usr/local/opt/openssl/lib
 ```
 
 Step 5: Run app
 ```
 rails server
 ```
+
+If error with webpacker and rerun app
+```
+rails webpacker:install
+```
+
+
 Access: http://localhost:3000/ to find application.
 
  Congratulation! You can run Rails application.
