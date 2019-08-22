@@ -49,10 +49,10 @@ Step 2: Install Ruby
 ```
 brew install rbenv // install rbenv
 rbenv install -l //list of ruby version can install
-rbenv install -v 2.2.3 // install ruby version 2.2.3
-rbenv install -v 2.4.0 // install ruby version 2.2.3
+rbenv install -v 2.6.3 // install ruby version 2.6.3
+rbenv install -v 2.4.0 // install ruby version 2.4.0
 rbenv versions  // list all ruby versions installed
-rbenv global 2.2.3 // set ruby version for this computer, rbenv local 2.2.3 --set ruby version for current path.
+rbenv global 2.6.3 // set ruby version for this computer, rbenv local 2.2.3 --set ruby version for current path.
 ruby -v //check ruby version
 //ruby 2.2.3p173 (2015-08-18 revivion 51636)
 
@@ -82,7 +82,7 @@ Step 3: Install Rails
 - Bundler gem helps to manage your application dependencies.
 ```
 gem install bundler // install gem bundler
-gem install rails -v 4.2.4 // install gem rails version 4.2.4
+gem install rails -v 6.0.0 // install gem rails version 6.0.0
 rbenv rehash // make Rails executable available
 rails -v // check version rails
 //Rails 4.2.4
