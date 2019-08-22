@@ -1,37 +1,15 @@
-
-### Create database
-- install mysql2 gem by add 2 lines to Gemfile.
-
-```
-gem 'mysql2', '>= 0.3.18', '< 0.5'
-```
-
-- Run to apply gem
-```
-bundle install
-```
-
-- Update database.yml
-```
-development:
-   adapter: mysql2
-   database: demo_rails_development
-   username: root
-   password: ""
-   host: localhost
-test:
-   adapter: mysql2
-   database: demo_rails_test
-   username: root
-   password: ""
-   host: localhost
-```
+Create object scaffold 
 
 - Create database:
 
 ```
 rake db:create
 ```
+
+```
+rails generate scaffold Post name:string title:string content:text
+```
+
 
 - Create model, migration:
 
