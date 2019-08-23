@@ -23,8 +23,14 @@ rake db:migrate
 - Create controller:
 ```
 rails g controller Home
-rails g controller Factory
-rails g controller Employee
+rails g controller Factories
+rails g controller Employees
+
+rails g controller Test index
+
+if wrong, cant delete controller:
+rails destroy controller Test
+
 ```
 
 update model: factory.rb
@@ -60,15 +66,15 @@ end
 ```
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
-<p><%= link_to "Go to Factories", {:controller => 'factories', :action => 'index' }%></p>
-<p><%= link_to "Go to Employees", employee_index_path%></p>
+<p><%= link_to "Go to Factories", factories_path%></p>
+<p><%= link_to "Go to Employees", employees_path%></p>
 ```
 
 - Access link http://localhost:3000/ --> home page
 
-- Update file factory_controller.rb
+- Update file factories_controller.rb
 ```
-class FactoryController < ApplicationController
+class FactoriesController < ApplicationController
   def new
     @factory = Factory.new
   end
@@ -155,7 +161,7 @@ end
 </ul>
 
 <%= form_tag :action => 'create' do %>
-<p><label for = "factory_name">Name</label>:
+<p><label for = "factory_name">Name:</label>
 <%= text_field 'factory', 'name' %></p>
 
 <%= submit_tag "Create" %>
