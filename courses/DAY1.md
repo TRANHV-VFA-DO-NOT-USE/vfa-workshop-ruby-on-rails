@@ -58,6 +58,7 @@ ruby -v //check ruby version
 
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >>~/.bash_profile
 echo eval "$(rbenv init -)" >>~/.bash_profile
+source ~/.bash_profile
 
 ```
  - Interactive Ruby (IRb) provides a shell for experimentation. Within the IRb shell, you can immediately view expression results, line by line.
