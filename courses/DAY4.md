@@ -1,21 +1,21 @@
-Create object scaffold 
+
 
 - Create database:
 
 ```
 rake db:create
 ```
-
+- Create object scaffold:
 ```
 rails generate scaffold Post name:string title:string content:text
+rake db:migrate
 ```
-
 
 - Create model, migration:
 
 ```
-rails g model factory name
-rails g model employee first_name last_name factory:references
+rails g model factory name note
+rails g model employee first_name last_name note factory:references
 
 rake db:migrate
 ```
@@ -24,7 +24,7 @@ rake db:migrate
 ```
 rails g controller Home
 rails g controller Factory
-rails g controller Employee new edit destroy index show
+rails g controller Employee
 ```
 
 update model: factory.rb
