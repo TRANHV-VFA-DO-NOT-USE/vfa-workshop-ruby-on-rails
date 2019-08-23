@@ -45,6 +45,7 @@ rake routes
   root :to => 'home#index'
   get 'home', :controller => 'home', :action => 'index'
   resources :factories
+  resources :employees
 ```
 
 - Update file home_controller.rb
@@ -191,6 +192,100 @@ end
 - Now you can test flow for Factory.
 
 
+- Create method, view for Employee same Factory but something need change:
+
+- app/models/factory.rb
+```
+class Factory < ApplicationRecord
+    has_many :employees, dependent: :destroy
+    validates_presence_of :name
+end
+```
+
+- app/models/employee.rb
+```
+class Employee < ApplicationRecord
+  belongs_to :factory
+  validates :first_name, length: { minimum: 2 }
+  validates :last_name, presence: true
+end
+```
+- app/controllers/employee_controller.rb
+```
+class EmployeeController < ApplicationController
+  def new
+    @employee = Employee.new
+    @factories = Factory.all
+  end
+
+  def create
+    @employee = Employee.new(employee_param)
+    @factories = Factory.all
+    if @employee.save
+       redirect_to :action => 'index'
+    else
+       render :action => 'new'
+    end
+  end
+  def employee_param
+    params.require(:employee).permit(:first_name, :last_name, :factory_id)
+  end
+
+  def update
+    @employee = Employee.find(params[:id])
+	
+   if @employee.update_attributes(employee_param)
+      redirect_to :action => 'show', :id => @employee
+   else
+      render :action => 'edit'
+   end
+  end
+
+  def edit
+    @employee = Employee.find(params[:id])
+    @factories = Factory.all
+  end
+
+  def destroy
+    Employee.find(params[:id]).destroy
+    redirect_to :action => 'index'
+  end
+
+  def index
+    @employees = Employee.all
+    @factories = Factory.all
+  end
+
+  def show
+    @employee = Employee.find(params[:id])
+    @factories = Factory.all
+  end
+end
+```
+- app/views/employee/new.html.erb
+```
+<h1>Add new employee</h1>
+
+<ul>
+  <% @employee.errors.each_with_index do |msg, i| %>
+  <li><%= msg[0].to_s + " " + msg[1].to_s %></li>
+  <% end %>
+</ul>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "employee_first_name">First Name</label>:
+<%= text_field 'employee', 'first_name' %></p>
+
+<p><label for = "employee_last_name">Last Name</label>:
+<%= text_field 'employee', 'last_name' %></p>
+<%= collection_select(:employee, :factory_id, @factories, :id, :name, prompt: true) %></p>
 
 
+<%= submit_tag "Create" %>
 
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>
+```
+
+- Same for edit, show ...
+- And test flow for employee
