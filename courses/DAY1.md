@@ -56,6 +56,8 @@ rbenv global 2.6.3 // set ruby version for this computer, rbenv local 2.2.3 --se
 ruby -v //check ruby version
 //ruby 2.6.3 (2015-08-18 revivion 51636)
 
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >>~/.bash_profile
+echo eval "$(rbenv init -)" >>~/.bash_profile
 
 ```
  - Interactive Ruby (IRb) provides a shell for experimentation. Within the IRb shell, you can immediately view expression results, line by line.
